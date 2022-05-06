@@ -211,3 +211,7 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+*.sqlite
+run
+tgbot.sh
+**/logs

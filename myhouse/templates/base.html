@@ -1,0 +1,27 @@
+<html class="no-js" lang="en">
+<head>
+<meta name="viewport"
+  content="width=device-width, initial-scale=1.2, max-scale=1.7, min-scale=0.9">
+        {{ stylesheet_tag("main_css") | safe }}
+
+    {% block head_style %}
+    {% endblock %}
+</head>
+<body>
+<nav>
+    <a href="/switches/">Switches</a>
+    ::
+    <a href="/static/effects.html">Test effects</a>
+    -
+    <a href="/static/fireplace-room.html">Lights in the room2</a>
+</nav>
+{% block content %}
+{% endblock %}
+    <!-- start scripts -->
+    {{ javascript_tag("font_awesome") | safe }}
+    {{ javascript_tag("main_css") | safe }}
+    {% block js %}{% endblock %}
+    <!-- end scripts -->
+{% block scripts %}
+{% endblock %}
+</body>

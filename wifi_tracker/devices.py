@@ -1,0 +1,3 @@
+
+IROS_IPHONE_MAC = "f2:50:ee:a5:73:1a"
+BLUE_FISH_CAR_MAC = "cc:88:26:bc:08:8f"

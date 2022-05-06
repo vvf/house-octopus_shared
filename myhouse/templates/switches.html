@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block head_style %}
+    {{ stylesheet_tag("switches_css") | safe }}
+{% endblock %}
+{% block content %}
+<div id="switches"></div>
+{% endblock %}
+
+{% block scripts %}
+    <!-- ::: -->
+    <script>
+    function getDeviceCollectionUrl(){
+        return '{{ url_for('api.device_collection') }}';
+    }
+    </script>
+    {{ javascript_tag("switches_css") | safe }}
+    {{ javascript_tag("switch_js") | safe }}
+<script type="text/javascript">
+
+</script>
+{% endblock %}

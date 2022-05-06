@@ -1,0 +1,13 @@
+#!/bin/bash
+
+BASE_PATH=/home/house
+. $BASE_PATH/venv/bin/activate
+export DATABASE_URL="postgresql://house:<password>@localhost/house"
+export TG_BOT_TOKEN="<TOKEN>"
+export WSSERVER_HOST=127.0.0.1
+export WSSERVER_PORT=8088
+
+trap "kill -- -$$" EXIT
+
+# /usr/bin/pidproxy $BASE_PATH/logs/$1.pid 
+exec $BASE_PATH/manage.py $*
